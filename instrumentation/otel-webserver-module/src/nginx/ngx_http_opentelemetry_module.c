@@ -1113,7 +1113,7 @@ static void stopMonitoringRequest(ngx_http_request_t* r,
 
     if (APPD_ISSUCCESS(res))
     {
-        ngx_writeError(r->connection->log, __func__, "Request Ends with result code: %d", res);
+        ngx_writeTrace(r->connection->log, __func__, "Request Ends with result code: %d", res);
     }
     else
     {
